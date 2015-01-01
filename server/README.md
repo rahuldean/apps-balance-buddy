@@ -1,5 +1,5 @@
 # Application API
-![Build Status](https://travis-ci.org/rahuldean/apps-balance-buddy.svg?branch=v2.0.0)
+[![Build Status](https://travis-ci.org/rahuldean/apps-balance-buddy.svg?branch=v2.0.0)](https://travis-ci.org/rahuldean/apps-balance-buddy)
 
 ## Overview
 Collection of all the APIs needed for the application
