@@ -5,8 +5,7 @@ services:
   - mongodb
 env:
   - TEST_DIR=server
-  - ENVIRONMENT=test
 script:
   - cd $TEST_DIR
   - npm install
-  - npm test
+  - ENVIRONMENT=test npm test
