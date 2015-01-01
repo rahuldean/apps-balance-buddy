@@ -5,7 +5,8 @@ var express                 = require('express'),
     app                     = express(),
     mongoose                = require('mongoose');
 
-var environment             = require('./config/environment');
+var environment             = require('./config/environment'),
+    route                   = require('./routes');
 
 mongoose.connect(environment.db);
 mongoose.connection.on('error', function(){
@@ -13,10 +14,12 @@ mongoose.connection.on('error', function(){
 });
 
 mongoose.connection.on('open', function(){
-    console.log('Connected to database');
+    console.log('Connected to database ' + environment.db);
 
     // Start the node server
     var server = app.listen(environment.server.port, environment.server.ip, function(){
         console.log('Server listening at %s on %s', server.address().address, server.address().port);
-    })
+    });
+
+    route.manage(app);
 });
