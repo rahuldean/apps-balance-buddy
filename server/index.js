@@ -23,3 +23,5 @@ mongoose.connection.on('open', function(){
 
     route.manage(app);
 });
+
+exports.app = app;

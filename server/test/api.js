@@ -7,12 +7,13 @@ var chai                = require('chai'),
     Operator            = require('../model/Operator'),
     Code                = require('../model/Code'),
     mongoose            = require('mongoose'),
-    environment         = require('../config/environment');
+    environment         = require('../config/environment'),
+    app                 = require('../index.js').app;
 
 describe('Basic API Tests', function(){
     var operatorIds     = [], // hold the created operator ids
         calls           = [], // hold async calls
-        baseURL         = environment.server.ip + ":" + environment.server.port,
+        baseURL         = app,
         mashape_header  = environment.headers.mashape_header_name,
         mashape_secret  = environment.headers.mashape_api_secret;
 
@@ -199,7 +200,7 @@ describe('Basic API Tests', function(){
 describe('Individual API Tests', function(){
     var operatorIds     = [], // hold the created operator ids
         calls           = [], // hold async calls
-        baseURL         = environment.server.ip + ":" + environment.server.port,
+        baseURL         = app,
         mashape_header  = environment.headers.mashape_header_name,
         mashape_secret  = environment.headers.mashape_api_secret;
 
