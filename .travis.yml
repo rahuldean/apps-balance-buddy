@@ -4,5 +4,8 @@ node_js:
 services:
   - mongodb
 env:
-  - TEST_SUITE=server
-script: "bundle exec rake test:$TEST_SUITE"
+  - TEST_DIR=server
+script:
+  - cd $TEST_DIR
+  - npm install
+  - npm test
