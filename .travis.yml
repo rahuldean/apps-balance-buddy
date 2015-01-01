@@ -9,5 +9,4 @@ env:
 script:
   - cd $TEST_DIR
   - npm install
-  - node index.js
   - npm test
