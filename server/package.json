@@ -1,0 +1,38 @@
+{
+  "name": "BalanceBuddyServer",
+  "version": "2.0.0",
+  "description": "Server component of balance buddy application",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahuldean/apps-balance-buddy"
+  },
+  "keywords": [
+    "balance",
+    "check",
+    "buddy",
+    "network",
+    "operator",
+    "prepaid"
+  ],
+  "author": "Rahul Reddy Malkireddy <godhc@me.com> (<godhc@me.com>)",
+  "license": "GPL",
+  "bugs": {
+    "url": "https://github.com/rahuldean/apps-balance-buddy/issues"
+  },
+  "homepage": "https://github.com/rahuldean/apps-balance-buddy",
+  "devDependencies": {
+    "mocha": "~2.1.0",
+    "chai": "~1.10.0"
+  },
+  "dependencies": {
+    "express": "~4.10.6",
+    "mongoose": "~3.8.21"
+  }
+}
